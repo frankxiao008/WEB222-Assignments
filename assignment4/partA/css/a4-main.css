@@ -1,0 +1,110 @@
+/* Place all of your CSS Code in this file */
+
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: _Damirkhon Yodgorov___ Student ID: 108364175 Date: 24.03.2018___ 
+* 
+********************************************************************************/
+
+body{
+
+background-color:black;
+
+}
+
+#wrapper{
+    width:1000px;
+    margin:auto;
+    background-color: white;
+}
+
+/* styling header */
+
+.app-title {
+    color:maroon;
+    font-size: 36px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    margin-left:30px;
+}  
+
+header{
+    
+    margin:-20px auto;
+    padding:5px;
+    background-color:  #FFE4E1;
+}
+/*styling nav*/
+
+nav{
+    background-color: maroon;
+}
+
+
+
+/* Styling main conatiner of the web page*/
+.main, .center
+{
+ width: 800px;
+ margin:auto;
+
+}
+.main-table-top{
+
+    background-color: #cccccc;
+    
+}
+.main-table-container
+{
+    position: static;
+    border:1px solid #cccccc;
+    height:480px;
+    width:800px;
+    overflow:auto;
+  
+}
+table{
+    border:1px solid white;
+}
+.main-table-top th{
+ 
+    padding:10px;
+    color:maroon;
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+
+}
+
+.main-table{
+    border:1px solid #cccccc;}
+
+.main-table td{
+   padding:10px;
+   text-align: justify;
+   display: table-cell;
+    vertical-align: inherit;
+    color: maroon;
+
+    }
+span{
+    font-weight:bold;
+    font-style:italic;
+}  
+.name{
+ font-style: normal;
+}
+/* Styling footer*/
+footer{
+    background-color:maroon;
+    
+}
+footer .center{
+ margin-left:60px; 
+}
