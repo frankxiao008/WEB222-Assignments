@@ -1,0 +1,113 @@
+<!doctype HTML>
+<html>
+   
+    <head>
+       <title>Damirkhon Yodgorov</title>
+       <script src="registration.js"></script>
+        <link href="normalize1.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    
+
+    <body>
+        
+        <div id="wrapper">
+
+               <header>
+                   
+                        <img src="images/logo2.png" alt="online shoping"/>
+                   
+                   <h1>Welcome to the online Web Shop</h1>
+               </header>
+
+               
+
+              
+                <nav>
+                    <ul>
+                       
+                       <li><a href="index.html"> Home</a></li>
+                        <li>
+                        <a href="registration.html">Registration</a>
+                       </li>
+                       <li><a href="https://amazon.ca" target="_blank">AMAZON Shopping</a></li>
+                       <li><a href="https://ebay.com" target="_blank">Ebay</a></li>
+                       <li><a href="https://google.com" target="_blank">Google Search Engine</a></li>
+
+                    </ul>
+
+
+
+                </nav>
+
+                <section>
+                    <h3>Please fill up the following registration form to be registered.</h3>
+                   <div id="form">
+                    <form action="https://httpbin.org/post" method="Post" name="signup" onsubmit="return checkAllData();">
+                        
+                        First Name: <input type="text" name="name" required/> <br/>
+                        Last Name: <input type="text" name="surname" required/><br/>
+                        <fieldset>
+                               <legend>Shipping address</legend>
+                               Unit Number: <input type="text" name="unit" required/><br/>
+                               Street Number: <input type="text" name="street" required/><br/>
+                               Street Name:<input type="text" name="street_name" required/><br/>
+                               City : <input type="text" name="city" required/><br/>
+                               Province: <input type="text" name="province" required/><br/>
+                               Postal Code: <input type="text" name="postal_code" required/>
+
+                        </fieldset> <br/>
+
+                        Phone number :<input type="text" name="phone" required/><br/>
+                        Email: <input type="text" name="email" required/><br/>
+                        Username: <input type="text" name="username" required/><br/>
+                        Password: <input type="password" name="password" required /><br/>
+                        Retype Password: <input type="password" name="repass" required/><br/>
+
+                        <input type="hidden" name="lastName" id="lastName" value="Damirkhon Yodgorov" /><br/>
+                        <input type="hidden" name="studentId" id="studentId" value="108364175" /><br/>
+                       <div id="errors"></div>   
+                     <input type="submit" value="Submit"/>
+                     <input type="reset" value="Clear"/>
+                     
+                    </form>
+                </div>
+                           
+                </section>
+
+                <aside>
+                   <h3>Shopping News </h3>
+                   <ul>
+                       
+                        <li><a href="https://globalnews.ca/tag/online-shopping/" target="_blank"> ONLINE SHOPPING</a></li>
+                         <li>
+                         <a href="http://business.financialpost.com/tag/online-shopping" target="_blank">Financial Post</a>
+                        </li>
+                        <li><a href="https://aliexpress.com" target="_blank">AliExpress</a></li>
+                        <li><a href="https://www.toronto.com/toronto-shopping/" target="_blank">Toronto Shopping</a></li>
+                        <li><a href="https://www.cfshops.com/toronto-eaton-centre.html" target="_blank">Eaton Centre</a></li>
+ 
+                     </ul>
+                </aside>
+                
+               
+
+ 
+
+               <footer>
+                     <p>&copy;Damirkhon Yodgorov <span>108364175</span></p>
+               </footer>
+
+        </div>
+        
+     
+
+
+
+
+    </body>
+
+
+
+
+</html>
