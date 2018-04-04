@@ -45,7 +45,7 @@
                    <div id="form">
                     <form action="https://httpbin.org/post" method="Post" name="signup" onsubmit="return checkAllData();">
                         
-                        First Name: <input type="text" name="name" required/> <br/>
+                        First Name: <input type="text" name="name" autofocus required/> <br/>
                         Last Name: <input type="text" name="surname" required/><br/>
                         <fieldset>
                                <legend>Shipping address</legend>
@@ -53,13 +53,24 @@
                                Street Number: <input type="text" name="street" required/><br/>
                                Street Name:<input type="text" name="street_name" required/><br/>
                                City : <input type="text" name="city" required/><br/>
-                               Province: <input type="text" name="province" required/><br/>
-                               Postal Code: <input type="text" name="postal_code" required/>
+                               Province:
+                                <select name="province" id="province">
+                                           <option value="ONTARIO">Ontario</option>
+                                           <option value="British Columbia">British Columbia</option>
+                                           <option value="Quebec">Quebec</option>
+                                           <option value="Alberta">Alberta</option>
+                                           <option value="Nova Scotia">Nova Scotia</option>
+                                           <option value="Manitoba">Manitoba</option>
+                                           <option value="Saskatchewan">Saskatchewan</option>
+                                           <option value="New Brunswick">New Brunswick</option>
+                                           <option value="Prince Edward Island">Prince Edward Island</option>
+                                         </select><br/>
+                               Postal Code: <input type="text" name="postal_code" pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$" autofocus required title="format allowed (Letter Digit Letter Digit Letter Digit)" required/>
 
                         </fieldset> <br/>
 
-                        Phone number :<input type="text" name="phone" required/><br/>
-                        Email: <input type="text" name="email" required/><br/>
+                        Phone number :<input type="text" pattern="^\d{3}-\d{3}-\d{4}$" autofocus required title="XXX-XXX-XXXX" name="phone" required/><br/>
+                        Email: <input type="email" name="email" required/><br/>
                         Username: <input type="text" name="username" required/><br/>
                         Password: <input type="password" name="password" required /><br/>
                         Retype Password: <input type="password" name="repass" required/><br/>

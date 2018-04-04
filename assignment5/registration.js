@@ -1,11 +1,17 @@
 function checkAllData()
 {
     clearAllErrors();
-    var result=password();
-    return username()&&result;
+    var result=password()
+    var result0=username();
+    var result1=province();
+    var result2=street_name();
+    var result3=city();
+    return result&&result0&&result1&&result2&&result3;
+    
 
 }
-
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 function password()
 {
     
@@ -24,8 +30,8 @@ function password()
     var length_error="Password must be 8 characters long";
     var match_error="Passwords do not match";
     var start_error="Password must start with a character";
-    var upper_error="Must have at least one UpperCase";
-    var digit_error="Must have at least one Digit";
+    var upper_error="Password must have at least one UpperCase";
+    var digit_error="Password must have at least one Digit";
     
     /*checks for the password length*/
     if(pass_length!=8)
@@ -119,7 +125,7 @@ function password()
 
 
 //Function used to check the username
-
+////////////////////////////////////////////////////////////////
 function username()
 {
 
@@ -176,8 +182,124 @@ function username()
  
 }
 
+////////////////////////////////////////////////////////////////
+/*function to check whether user selected a province or not*/
+
+function province()
+{
+   var province=document.signup.province.selectedIndex;
+   var error=true;
+   var expression=0;
+   var error_mess="Please select one of the provinces";
+   
+   
+
+   if(province==-1)
+   {
+       
+    showerror("<p>"+error_mess+"</p>"); 
+    error=false;
+   }
+  else
+  error=true;
 
 
+   if(!error)
+ {
+      return false;
+ }
+
+ else
+ return true;
+
+
+}
+
+
+////////////////////////////////////////////////////////////////
+/*Function used to check the street name*/
+
+function street_name()
+{
+  var street=document.signup.street_name.value.trim();
+  var alldigits="1234567890";
+  var street_error="Street name should not contain any digit";
+  var check=0;
+  var error=true;
+
+  for(var i=0;i<street.length;i++)
+  {
+    if(alldigits.indexOf(street.substr(i,1))>=0)
+    {
+        check=1;
+        error=false;
+        break;
+    }
+
+  }
+  
+  if(check==1)
+  {
+    showerror("<p>"+street_error+"</p>");
+    error=false;
+  }
+
+
+
+    if(!error)
+     {
+       return false;
+     }
+ 
+    else
+     return true;
+
+
+}
+
+////////////////////////////////////////////////////////////////
+/*Function used to check city field*/
+
+function city()
+{
+   var error=true;
+   var city=document.signup.city.value.trim();
+   var alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var city_error="City field must contain letters only";
+   var error_check=0;
+   for(var i=0;i<city.length;i++)
+   {
+       if(alphabet.indexOf(city.substr(i,1))>=0)
+       {error_check=1;
+       }
+       else
+       {
+         error_check=0;
+         break;
+       }
+   }
+
+   if(error_check==0)
+   {
+       error=false;
+       showerror("<p>"+city_error+"</p>");
+   }
+
+
+
+   if(!error)
+   {
+     return false;
+   }
+
+  else
+   return true;
+
+
+}
+
+
+////////////////////////////////////////////////////////////////
 
 /*Function used to display an error message for the user*/
 
@@ -186,7 +308,7 @@ function showerror(text)
     document.querySelector("#errors").innerHTML+=text;
 }
 /*Function used to clear all the error messages*/
-
+////////////////////////////////////////////////////////////////
 function clearAllErrors()
 {
     document.querySelector("#errors").innerHTML="";
